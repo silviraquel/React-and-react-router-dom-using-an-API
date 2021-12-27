@@ -1,11 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import {render} from "react-dom";
+import {
+  BrowserRouter,
+   Routes,
+  Route
+} from "react-router-dom";
+import App from "./App";
+import Home from "./pages/Home";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const rootElement = document.getElementById("root");
+render(
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}>
+      </Route>
+    </Routes>
+  </BrowserRouter>,
+  rootElement
 );
-
