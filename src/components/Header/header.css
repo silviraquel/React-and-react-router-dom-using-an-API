@@ -20,4 +20,6 @@ header{
     background-color: #FFF;
     border-radius: 5px;
     padding: 5px;
+    font-weight: bold;
+    color:black;
 }
