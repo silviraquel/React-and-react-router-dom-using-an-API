@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
+import { Link } from "react-router-dom";
+import './home.css';
 
 export default function Home() {
   const [filmes, setfilmes] = useState([]);
@@ -15,8 +17,18 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="app">
-      <h2>Você está na Home</h2>
+    <div className="container">
+      <div className="lista-filmes">
+          {filmes.map((filme)=> {
+            return( //usando as propriedades da API
+              <article key={filme.id}>
+                <strong>{filme.nome}</strong>
+                <img src={filme.foto} alt={filme.nome}/>
+                <Link to= '/'>Acessar</Link>
+              </article>
+            )
+          })}
+      </div>
     </div>
   );
 }
