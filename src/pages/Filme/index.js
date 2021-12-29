@@ -44,6 +44,16 @@ export default function Filme(){
 
         <h3>Sinopse</h3>
         {filme.sinopse}
+
+        <div className='botoes'>
+            <button onClick={()=>{}}>Salvar</button>
+            <button>
+                <a className='linkYou' target='_blank' href={`http://youtube.com/results?search_query=${filme.nome} Trailer`}>
+                    Trailer
+                </a>
+            </button>
+        </div>
+
      </div>
     )        
 }
