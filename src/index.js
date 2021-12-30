@@ -9,6 +9,7 @@ import Header from './components/Header';
 import './style.css'
 import Filme from "./pages/Filme";
 import Favoritos from "./pages/Favoritos";
+import Erro from "./pages/Erro";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -21,6 +22,8 @@ render(
       <Route exact path="/" element={<Home />}/>
       <Route exact path="/filme/:id" element={<Filme />}/>
       <Route exact path="/favoritos" element={<Favoritos />}/>
+      <Route exact path="*" element={<Erro />}/>
+
     </Routes>
     <ToastContainer autoClose={3000}/>
   </BrowserRouter>,
